@@ -26,7 +26,7 @@ function zombiesDropGames.distChange()
         for itemID,_ in pairs(gameNightDistro.proceduralDistGameNight.itemsToAdd) do
             if (not itemExceptionList) or (itemExceptionList and ((blackList and (not itemExceptionList[itemID])) or itemExceptionList[itemID])) then
                 ---make entire game boxes spawn much less
-                local chance = gameNightDistro.gameNightBoxes[itemID] and 0.0001 or 0.001
+                local chance = gameNightDistro.gameNightBoxes[itemID] and 0.001 or 0.01
 
                 table.insert(dist, itemID)
                 table.insert(dist, chance)
