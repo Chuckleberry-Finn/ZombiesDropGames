@@ -7,10 +7,11 @@ zombiesDropGames.distros = {["inventorymale"]="all",["inventoryfemale"]="all"}
 
 function zombiesDropGames.distChange()
 
-    local blackList = SandboxVars.GameNight.ZombiesDropLootWhiteBlackToggle=="2"
+    local blackList = SandboxVars.GameNight.ZombiesDropLootWhiteBlackToggle==2
     local itemExceptionList = false
     local sandboxItemList = SandboxVars.GameNight.ZombiesDropLootList
 
+    print("zombiesDropGames_blackList:", blackList)
     print("zombiesDropGames_",sandboxItemList)
     if sandboxItemList ~= "" then
         itemExceptionList = {}
@@ -24,9 +25,19 @@ function zombiesDropGames.distChange()
     for distID,parentID in pairs(zombiesDropGames.distros) do
         local dist = parentID and SuburbsDistributions[parentID][distID].items or SuburbsDistributions[distID].items
         for itemID,_ in pairs(gameNightDistro.proceduralDistGameNight.itemsToAdd) do
-            if (not itemExceptionList) or (itemExceptionList and ((blackList and (not itemExceptionList[itemID])) or itemExceptionList[itemID])) then
+
+            local valid = (not itemExceptionList)
+            if itemExceptionList then
+                if blackList then
+                    valid = (not itemExceptionList[itemID])
+                else
+                    valid = itemExceptionList[itemID]
+                end
+            end
+
+            if valid then
                 ---make entire game boxes spawn much less
-                local chance = gameNightDistro.gameNightBoxes[itemID] and 0.001 or 0.01
+                local chance = (gameNightDistro.gameNightBoxes[itemID] and 0.01 or 0.2) * (SandboxVars.GameNight.ZombiesDropLootMultiplier or 1)
 
                 table.insert(dist, itemID)
                 table.insert(dist, chance)
