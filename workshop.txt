@@ -13,6 +13,6 @@ description=
 description=[url=https://github.com/Chuckleberry-Finn/game-night][img]https://raw.githubusercontent.com/Chuckleberry-Finn/game-night/main/images/addOnGuideBanner.png[/img][/url]
 description=
 description=
-description=[h3]The remainder of the content is Copyright 2024 Chuckleberry Finn. This item is not authorized for posting on Steam, except under the Steam account(s) named Chuckleberry Finn.[/h3]
+description=[h3]Copyright 2024 Chuckleberry Finn. This item is not authorized for posting on Steam, except under the Steam account(s) named Chuckleberry Finn.[/h3]
 tags=Build 41;Multiplayer;Pop Culture;Silly/Fun
 visibility=public
