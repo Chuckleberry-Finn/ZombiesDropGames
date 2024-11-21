@@ -11,4 +11,4 @@ option GameNight.ZombiesDropLootWhiteBlackToggle
 }
 
 option GameNight.ZombiesDropLootMultiplier
-{type = double, min = 0.01, max = 9999, default = 1, page = GameNight, translation = ZombiesDropLootMultiplier,}
+{type = double, min = 0.0001, max = 9999, default = 0.1, page = GameNight, translation = ZombiesDropLootMultiplier,}
