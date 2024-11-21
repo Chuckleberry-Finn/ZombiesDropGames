@@ -37,7 +37,7 @@ function zombiesDropGames.distChange()
 
             if valid then
                 ---make entire game boxes spawn much less
-                local chance = (gameNightDistro.gameNightBoxes[itemID] and 0.01 or 0.2) * (SandboxVars.GameNight.ZombiesDropLootMultiplier or 1)
+                local chance = (gameNightDistro.gameNightBoxes[itemID] and 0.01 or 0.2) * (SandboxVars.GameNight.ZombiesDropLootMultiplier or 0.01)
 
                 table.insert(dist, itemID)
                 table.insert(dist, chance)
