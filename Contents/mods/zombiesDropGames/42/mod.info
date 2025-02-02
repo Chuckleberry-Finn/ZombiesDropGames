@@ -2,7 +2,8 @@ id=gameNight-zombiesDropGames
 name=Game Night: Zombies Drop Games
 description= 
 poster=poster.png
-versionMin=42.0
 require=\gamenight
-
+author=Chuckleberry Finn
+icon=icon.png
+versionMin=42.0
 
