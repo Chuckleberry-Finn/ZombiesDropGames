@@ -1,4 +1,4 @@
-local gameNightDistro = require "gameNight - Distributions"
+local gameNightDistro = require("gameNight-Distributions.lua")
 
 local zombiesDropGames = {}
 
